@@ -1,0 +1,22 @@
+﻿Build started 2/05/2019 7:27:20 PM.
+     1>Project "C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\Game Project copy\Game Project\Game Project.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\game project copy\game project\main.cpp(157): warning C4305: 'argument' : truncation from 'int' to 'Uint8'
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\game project copy\game project\main.cpp(157): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\game project copy\game project\main.cpp(162): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\game project copy\game project\main.cpp(163): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\game project copy\game project\main.cpp(175): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\Game Project copy\Debug\Game Project.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib SDL2_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\Game Project copy\Debug\Game Project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\Game Project copy\Debug\Game Project.lib" /MACHINE:X86 Debug\Animation.obj
+         Debug\Entity.obj
+         Debug\main.obj
+         Debug\Vector.obj
+         Debug\Wall.obj
+         Game Project.vcxproj -> C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\Game Project copy\Debug\Game Project.exe
+     1>Done Building Project "C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\Game Project copy\Game Project\Game Project.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.73

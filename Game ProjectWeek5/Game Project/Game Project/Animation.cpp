@@ -17,6 +17,12 @@ Animation::Animation(SDL_Texture* texture, SDL_Renderer* renderer, int numberOfF
 	currentFrame = 0;//0 as first frame
 	frameTimer = 0;
 }
+
+
+
+
+
+
 void Animation::update(float dt){
 	//update frameTimer
 	frameTimer += dt;
