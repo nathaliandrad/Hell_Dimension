@@ -123,11 +123,8 @@ int main(int argc, char** argv){
 	}
 
 	//Play the music!
-	//params: music to play
-	//		how many times to loop the music (-1 play infinitely)
 	Mix_PlayMusic(music, -1);
-
-
+	//time management
 	Uint32 lastUpdate = SDL_GetTicks();
 	bool loop = true;
 
@@ -183,7 +180,6 @@ int main(int argc, char** argv){
 	Mix_PausedMusic();
 	//delete song from memory
 	Mix_FreeMusic(music);
-
 	//CLEAN UP
 	SDL_DestroyTexture(textTexture);
 	SDL_DestroyRenderer(renderer);

@@ -172,8 +172,7 @@ int main(int argc, char** argv){
 	Animation anim(bloodSpriteSheetWithNoBG, renderer, 4, 64, 64, 0.2);
 	Animation anim2(bloodSpriteSheetWithNoBG, renderer, 4, 64, 64, 0.2);
 
-
-	//LOAD UP SOME MUSIC
+	//LOAD UP music
 	Mix_Music* music = Mix_LoadMUS("assets/World-of-Automatons_Looping.mp3");
 	if (music == NULL){
 		cout << "Music failed! : " << Mix_GetError() << endl;
@@ -182,14 +181,11 @@ int main(int argc, char** argv){
 		return -1;
 	}
 
-	//Play the music!
-	//params: music to play
-	//		how many times to loop the music (-1 play infinitely)
+	//Playing music
+	//how many times to loop the music (-1 play infinitely)
 	Mix_PlayMusic(music, -1);
 
-
-
-	//stuff for time management
+	//time management
 	Uint32 lastUpdate = SDL_GetTicks();
 	bool loop = true;
 
@@ -292,7 +288,7 @@ int main(int argc, char** argv){
 		//right image
 		anim.draw(690, 30, 1.8f);
 		//left image
-		anim2.draw(70, 30, 1.8f);
+		anim2.draw(70, 30, true,1.8f);
 
 
 		SDL_RenderPresent(renderer);
@@ -300,12 +296,10 @@ int main(int argc, char** argv){
 	
 	}
 
-
 	//stop playing music BEFORE you release its memory
 	Mix_PausedMusic();
 	//delete song from memory
 	Mix_FreeMusic(music);
-
 	//releasing memory/ destroying
 	SDL_DestroyTexture(textTexture);
 	SDL_DestroyRenderer(renderer);

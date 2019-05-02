@@ -79,3 +79,23 @@ void Animation::draw(int x, int y, bool flip){
 	SDL_RenderCopyEx(renderer, spriteSheet, &clip, &dest, 0,NULL, flipType);
 
 }
+void Animation::draw(int x, int y, bool flip, float scale){
+	//get current frame clipping region
+	SDL_Rect clip;
+	clip.x = currentFrame*frameWidth;
+	clip.y = 0; //if having multiple rows of animation, this part will need to be changed
+	clip.w = frameWidth;
+	clip.h = frameHeight;
+	//setup destination rectangle
+	SDL_Rect dest = { x, y, frameWidth*scale, frameHeight*scale };
+
+	//setup flip flag
+	SDL_RendererFlip flipType = SDL_FLIP_NONE;
+	if (flip)
+		flipType = SDL_FLIP_HORIZONTAL;
+
+	//draw										   angle,rotation center, flip flag
+	SDL_RenderCopyEx(renderer, spriteSheet, &clip, &dest, 0, NULL, flipType);
+
+
+}
