@@ -2,12 +2,12 @@
 #include <string>
 #include <SDL.h>
 #include <SDL_image.h>
-#include <SDL_ttf.h> //text to font
+#include <SDL_ttf.h> 
 #include "Animation.h"
 #include "Entity.h"
 #include "Wall.h"
-#include <list>//linked list
-#include <SDL_mixer.h>//sound n music
+#include <list>
+#include <SDL_mixer.h>
 
 using namespace std;
 
@@ -26,7 +26,6 @@ int main(int argc, char** argv){
 		system("pause");
 		return -1;
 	}
-
 	//init sdl mixer
 	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096) == -1){
 		cout << "Mixer error: " << Mix_GetError() << endl;
@@ -34,17 +33,13 @@ int main(int argc, char** argv){
 		system("pause");
 		return -1;
 	}
-
-
 	//INIT sdl text font
 	if (TTF_Init() != 0){
 		cout << "sdl ttf failed: " << TTF_GetError() << endl;
 		system("pause");
 		return -1;
 	}
-
 	//create window to render into
-	//params: (title, position x, position y, width, height, window flags)
 	SDL_Window* window = SDL_CreateWindow("My Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 		900, 700, SDL_WINDOW_SHOWN); //fullscreen with last param like this: SDL_WINDOW_SHOWN|SDL_WINDOW_FULLSCREEN
 
@@ -82,8 +77,7 @@ int main(int argc, char** argv){
 	wall2->setWH(900, 32);
 	entities.push_back(wall2);
 
-
-	// Setting up text
+	// Setting Hell dimension text
 	TTF_Font* font = TTF_OpenFont("assets/something_strange.ttf", 90);
 	SDL_Color textColor = { 0, 0, 0, 0 };
 	//create surface using font, colours and some sort of message
@@ -98,67 +92,56 @@ int main(int argc, char** argv){
 	//query to get width and height
 	SDL_QueryTexture(textTexture, NULL, NULL, &textDestination.w, &textDestination.h);
 
-	//setting up other texts
+
+	//setting up start game text
 	TTF_Font* menuFont = TTF_OpenFont("assets/arcade_classic.ttf", 50);
 	SDL_Color menuTextColor = { 255, 255, 255, 0 };
-
 	SDL_Surface* menuTextSurface = TTF_RenderText_Blended(menuFont, "start game", menuTextColor);
-	//convert surface to texture
 	SDL_Texture* menuTextTexture = SDL_CreateTextureFromSurface(renderer, menuTextSurface);
 	SDL_FreeSurface(menuTextSurface);
-	//text DESTINATION
 	SDL_Rect menuTextDestination;
 	menuTextDestination.x = 315;
 	menuTextDestination.y = 185;
-	//query to get width and height
 	SDL_QueryTexture(menuTextTexture, NULL, NULL, &menuTextDestination.w, &menuTextDestination.h);
 
-	//setting up other texts
+
+	//setting up load game text
 	SDL_Surface* menuText2Surface = TTF_RenderText_Blended(menuFont, "load  game", menuTextColor);
-	//convert surface to texture
 	SDL_Texture* menuText2Texture = SDL_CreateTextureFromSurface(renderer, menuText2Surface);
 	SDL_FreeSurface(menuText2Surface);
-	//text DESTINATION
 	SDL_Rect menuText2Destination;
 	menuText2Destination.x = 325;
 	menuText2Destination.y = 275;
-	//query to get width and height
 	SDL_QueryTexture(menuText2Texture, NULL, NULL, &menuText2Destination.w, &menuText2Destination.h);
 
-	//setting up other texts
+
+	//setting up setting text
 	SDL_Surface* menuText3Surface = TTF_RenderText_Blended(menuFont, "settings", menuTextColor);
-	//convert surface to texture
 	SDL_Texture* menuText3Texture = SDL_CreateTextureFromSurface(renderer, menuText3Surface);
 	SDL_FreeSurface(menuText3Surface);
-	//text DESTINATION
 	SDL_Rect menuText3Destination;
 	menuText3Destination.x = 330;
 	menuText3Destination.y = 365;
-	//query to get width and height
 	SDL_QueryTexture(menuText3Texture, NULL, NULL, &menuText3Destination.w, &menuText3Destination.h);
 
-	//setting up other texts
+
+	//setting up leaderboard text
 	SDL_Surface* menuText4Surface = TTF_RenderText_Blended(menuFont, "leaderboard", menuTextColor);
-	//convert surface to texture
 	SDL_Texture* menuText4Texture = SDL_CreateTextureFromSurface(renderer, menuText4Surface);
 	SDL_FreeSurface(menuText4Surface);
-	//text DESTINATION
 	SDL_Rect menuText4Destination;
 	menuText4Destination.x = 295;
 	menuText4Destination.y = 455;
-	//query to get width and height
 	SDL_QueryTexture(menuText4Texture, NULL, NULL, &menuText4Destination.w, &menuText4Destination.h);
 
-	//setting up other texts
+
+	//setting up quit game text
 	SDL_Surface* menuText5Surface = TTF_RenderText_Blended(menuFont, "quit game", menuTextColor);
-	//convert surface to texture
 	SDL_Texture* menuText5Texture = SDL_CreateTextureFromSurface(renderer, menuText5Surface);
 	SDL_FreeSurface(menuText5Surface);
-	//text DESTINATION
 	SDL_Rect menuText5Destination;
 	menuText5Destination.x = 330;
 	menuText5Destination.y = 545;
-	//query to get width and height
 	SDL_QueryTexture(menuText5Texture, NULL, NULL, &menuText5Destination.w, &menuText5Destination.h);
 
 
@@ -182,7 +165,6 @@ int main(int argc, char** argv){
 	}
 
 	//Playing music
-	//how many times to loop the music (-1 play infinitely)
 	Mix_PlayMusic(music, -1);
 
 	//time management
@@ -212,8 +194,6 @@ int main(int argc, char** argv){
 					loop = false;
 				}
 			}
-		
-
 		}
 
 		//set drawing colour for renderer
@@ -254,7 +234,6 @@ int main(int argc, char** argv){
 		SDL_SetRenderDrawColor(renderer, 139, 0, 0, 1); //rgba(139,0,0 ,1 )
 		SDL_RenderFillRect(renderer, &rectangle6);
 
-
 		//rectangle 4
 		SDL_Rect rectangle7 = { 235, 440, 420, 80 };
 		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
@@ -290,10 +269,8 @@ int main(int argc, char** argv){
 		//left image
 		anim2.draw(70, 30, true,1.8f);
 
-
 		SDL_RenderPresent(renderer);
 
-	
 	}
 
 	//stop playing music BEFORE you release its memory
@@ -304,7 +281,6 @@ int main(int argc, char** argv){
 	SDL_DestroyTexture(textTexture);
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
-
 	SDL_Quit();
 
 	return 0;

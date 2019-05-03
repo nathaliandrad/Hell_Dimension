@@ -8,7 +8,6 @@ Vector::Vector()
 
 }
 
-
 Vector::Vector(float x, float y)
 {
 	this->x = x;

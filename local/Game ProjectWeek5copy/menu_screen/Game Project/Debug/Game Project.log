@@ -1,17 +1,20 @@
-﻿Build started 2/05/2019 10:23:35 PM.
+﻿Build started 3/05/2019 7:28:22 PM.
      1>Project "C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\menu_screen\Game Project\Game Project.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Animation.cpp main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Animation.cpp Entity.cpp Vector.cpp Wall.cpp main.cpp
          main.cpp
-     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(167): warning C4305: 'argument' : truncation from 'int' to 'Uint8'
-     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(167): warning C4309: 'argument' : truncation of constant value
-     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(172): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(173): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(197): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-         Animation.cpp
-     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\animation.cpp(58): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\animation.cpp(90): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(150): warning C4305: 'argument' : truncation from 'int' to 'Uint8'
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(150): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(155): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(156): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\main.cpp(179): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         Wall.cpp
+     1>c:\users\natha\onedrive\documents\ait\3rd term\game engine\assigment1\local\game projectweek5copy\menu_screen\game project\wall.cpp(20): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+         Vector.cpp
          Generating Code...
+         Skipping... (no relevant changes detected)
+         Entity.cpp
+         Animation.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\menu_screen\Debug\Game Project.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib SDL2_ttf.lib SDL2_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\menu_screen\Debug\Game Project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\natha\OneDrive\Documents\AIT\3rd Term\Game Engine\Assigment1\local\Game ProjectWeek5copy\menu_screen\Debug\Game Project.lib" /MACHINE:X86 Debug\Animation.obj
          Debug\Entity.obj
@@ -23,4 +26,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.84
+Time Elapsed 00:00:00.76
